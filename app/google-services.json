@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "217057663369",
+    "firebase_url": "https://facebooktad-746a6.firebaseio.com",
+    "project_id": "facebooktad-746a6",
+    "storage_bucket": "facebooktad-746a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217057663369:android:5be23b01cf59f181716958",
+        "android_client_info": {
+          "package_name": "com.example.facebooktad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217057663369-r2qm4mon46tip5mm41ucnfnu0q2smm6p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4ks3VXVe6bQZFViAlEb--DQQWj3qA7XM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217057663369-r2qm4mon46tip5mm41ucnfnu0q2smm6p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
