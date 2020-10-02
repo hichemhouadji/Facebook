@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"/>
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/email"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="32dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:background="@drawable/inputs"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:padding="4dp"
+        android:drawableLeft="@drawable/email" />
+
+
+
+
+    <EditText
+        android:id="@+id/login_password"
+        android:background="@drawable/inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:drawableStart="@drawable/password"
+        android:padding="4dp"
+        android:hint="Password"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="17dp"
+
+        android:imeOptions="actionUnspecified"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/password" />
+
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/buttons"
+        android:padding="16dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginLeft="19dp"
+        android:textColor="#fff"
+        android:text="Login"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:id="@+id/register_account_link"
+        android:background="@null"
+        android:text="Need a new account"
+        android:textAllCaps="false"
+android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/using_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:background="@null"
+        android:text="Or login with"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/facebook"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/twitter"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/google"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- Link to Login Screen -->
+
+
+
+</LinearLayout>
