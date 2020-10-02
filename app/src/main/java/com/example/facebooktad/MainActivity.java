@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ private RecyclerView postlist;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private DatabaseReference UsersRef, PostsRef;
     String currentUserID;
+    private ImageButton AddNewPostButton;
     private androidx.appcompat.widget.Toolbar mToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +50,7 @@ private RecyclerView postlist;
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Home");
 
-
+        AddNewPostButton = (ImageButton) findViewById(R.id.add_new_post_button);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawable_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -60,6 +62,17 @@ private RecyclerView postlist;
         View navView = navigationView.inflateHeaderView(R.layout.navigation_header);
         NavProfileImage = (CircleImageView) navView.findViewById(R.id.nav_profile_image);
         NavProfileUserName = (TextView) navView.findViewById(R.id.nav_user_full_name);
+
+        AddNewPostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SendUserToPostActivity();
+            }
+        });
+
+
+
+
 
 
         UsersRef.child(currentUserID).addValueEventListener(new ValueEventListener() {
@@ -171,8 +184,8 @@ private RecyclerView postlist;
             switch (item.getItemId())
             {
                 case R.id.nav_new_post:
-                    Toast.makeText(this, "Posts", Toast.LENGTH_SHORT).show();
-                    break;
+SendUserToPostActivity();
+break;
                 case R.id.nav_profile:
                     Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
                     break;
@@ -203,4 +216,12 @@ private RecyclerView postlist;
                     break;
             }
     }
+
+    private void SendUserToPostActivity()
+    {
+        Intent addNewPostIntent = new Intent(MainActivity.this, PostActivity.class);
+        startActivity(addNewPostIntent);
+    }
+
+
 }
